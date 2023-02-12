@@ -36,7 +36,6 @@ Item *delsymv(Item *p) {
                 a = a->next;
         }
         if(a->data == '"' || a->data == '\n') {
-                //a = a->next;
                 if(a->next->data!=NULL){
                         a->next->data -= 32;
                 }
@@ -93,8 +92,6 @@ int main() {
         input(list, &str);
         printf("\n");
         delsymv(list->head);
-        //str = '"';
-        //input(list, &str);
         print(list);
         printf("\n");
         deleteList(list->head);
